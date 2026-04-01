@@ -1,0 +1,6 @@
+/venv
+/__pycache__
+/data_lake/*.parquet
+!data_lake/.gitkeep
+/data/*
+!data/.gitkeep
