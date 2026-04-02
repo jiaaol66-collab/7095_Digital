@@ -58,6 +58,6 @@ for dataset_name, table_name in [("Electronics", "elec"), ("Cell_Phones_and_Acce
 
     if writer:
         writer.close()
-    print(f"\n   ✅ {total:,} rows → {dataset_name}_meta_clean.parquet  ({time.time()-t0:.1f}s)")
+    print(f"\n   ✅ {total:,} rows → {dataset_name}_meta.parquet  ({time.time()-t0:.1f}s)")
 
 print("\n✨ Done!")

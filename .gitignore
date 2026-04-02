@@ -4,3 +4,4 @@
 !data_lake/.gitkeep
 /data/*
 !data/.gitkeep
+*.xlsx
