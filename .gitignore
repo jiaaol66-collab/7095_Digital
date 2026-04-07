@@ -6,3 +6,4 @@
 !data/.gitkeep
 *.xlsx
 *-checkpoint.ipynb
+configs/local
