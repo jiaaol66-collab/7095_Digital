@@ -7,3 +7,4 @@
 *.xlsx
 *-checkpoint.ipynb
 configs/local
+/.ipynb_checkpoints
