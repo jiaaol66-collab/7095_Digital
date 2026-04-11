@@ -8,5 +8,3 @@
 *-checkpoint.ipynb
 configs/local
 /.ipynb_checkpoints
-*.png
-/png/*

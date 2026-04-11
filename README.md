@@ -4,7 +4,13 @@
 
 Our project requires Docker Desktop.
 
-Once downloaded, type (or copy and paste) the following command in the terminal:
+Once downloaded, launch it,
+
+❗Attention❗: 
+For [Phase1&2] and [Phase3&4], plase uncommend or commend out first module in docker-compose.yml, 
+For detail, please refer the specific notebook.
+
+Type (or copy and paste) the following command in the terminal:
 
 ```bash
 docker-compose up -d
@@ -34,7 +40,12 @@ e.g. http://5ab7977b7ef1:8888/?token=28737xxxxxxxxxxxxxxxxxxxxxxxxxxxxcf55d5
 
 Hit Enter, then Enter again... and you're in!
 
-🚨 AND DO **NOT** FORGET to run the **First cell** before you do anything else!
+🚨 AND DO **NOT** FORGET to run the **Spark Session Init Cell** before you do anything else!
+
+## Test Data
+We provide a small test dataset for you to try out the pipeline.
+The test data is available in the `data_test` directory.
+Please set the [Phase1&2] notebook **Test Mode Cell** to True.
 
 
 ## Team Roles & Pipeline Responsibilities
