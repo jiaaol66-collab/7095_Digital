@@ -48,7 +48,7 @@ Hit Enter, then Enter again... and you're in!
 * **Pre-filtering & Data Lake Alignment:** Extracts metadata from MongoDB, applies brand whitelisting, executes schema casting, and aligns review data using the `parent_asin` key. Partitions and writes the synchronized data into HDFS (`/ecommerce/data_lake/meta` and `/review`) with optional local backup support.
 * **Execution Mode Control:** Implements configuration flags to seamlessly toggle downstream Phase 3 & 4 reads between local Parquet files and the HDFS cluster.
 
-### Member 2: Data Quality Assurance & Cleaning (Phase 3 & 4)
+### Member 2: Data Quality Assurance & Cleaning (Phase 3)
 *Primary workspace: `[Phase3&4]_Storage&Analytics.ipynb`*
 
 * **Metadata Cleansing:** Ingests raw data from the data lake and systematically handles null/invalid values, formats pricing fields, and identifies/removes price outliers using the Interquartile Range (IQR) method.
@@ -66,13 +66,13 @@ Hit Enter, then Enter again... and you're in!
 * **Semantic Labeling & Probes:** Utilizes PySpark window functions to rank clusters by average price within categories, dynamically generating "tier labels" and employing noise-word probes for cluster validation.
 * **Advanced Business Analytics:** Calculates premium metrics by comparing cluster baselines against store averages. Constructs indices for brand equity and cost-effectiveness, exporting the datasets for visual analytics.
 
-### Member 4: Machine Learning Engineering (Phase 3 & 4)
+### Member 4: Machine Learning Engineering (Phase 4)
 *Primary workspace: `[Phase3&4]_Storage&Analytics.ipynb`*
 
 * **Data Fusion:** Broadcast-joins store, price, and cluster attributes from the metadata to the review dataset. Constructs sentiment classification labels (ratings >= 4 defined as positive) to build the modeling dataset.
 * **Model Training & Analysis:** Architects a Spark ML Pipeline (`Tokenizer` -> `StopWords` -> `TF-IDF` -> `Logistic Regression`) for sentiment prediction. Extracts deep insights, including store-level sentiment performance and price-bucket inflection points, and exports the findings.
 
-### Member 5: Visualization & Dashboarding (Phase 3 & 4)
+### Member 5: Visualization & Dashboarding (Phase 4)
 *Primary workspace: `[Phase3&4]_Storage&Analytics.ipynb`*
 
 * **Visual Analytics:** Consumes upstream CSV exports (premiums, sentiment analysis, inflection points) to generate multi-dimensional charts (bar, scatter, and line graphs). Selects key clusters based on data variance and business value, rendering and saving the final PNG assets for the project presentation and report.
