@@ -1,14 +1,14 @@
 services:
-  # # 1. MongoDB (for storing user comment texts) MAINLY FOR PHASE 1.
-  # mongodb: # once pulled please comment out this block
-  #   image: docker.m.daocloud.io/library/mongo:6.0
-  #   container_name: mongodb_server
-  #   ports:
-  #     - "27017:27017"
-  #   volumes:
-  #     - mongo_data:/data/db
-  #   networks:
-  #     - ecommerce_network
+  # 1. MongoDB (for storing user comment texts) MAINLY FOR PHASE 1.
+  mongodb: # once pulled please comment out this block
+    image: docker.m.daocloud.io/library/mongo:6.0
+    container_name: mongodb_server
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - ecommerce_network
 
   # 2. Hadoop HDFS (for storing structured product specifications and Parquet data lake)
   namenode:
